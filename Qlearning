@@ -3,10 +3,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 初始化環境
+#CartPole經典的強化學習問題，目標是控制小車，使其能夠平衡一根杆子。
 env = gym.make('CartPole-v1')
 
 # 定義離散化數量
-num_bins = (6, 6, 6, 6)  # 為每個狀態維度劃分 6 個區間
+num_bins = (6, 6, 6, 6)  # 為每個狀態維度劃分 6 個區間(小車位置、小車速度、杆子角度、杆子角速度)
 action_space = env.action_space.n
 
 # 初始化 Q-table
